@@ -1,0 +1,32 @@
+{
+  "name": "wp-admin-ui-react",
+  "version": "0.0.0",
+  "description": "WordPress admin UI as React components",
+  "main": "lib/wp-admin-ui-react.js",
+  "module": "lib/wp-admin-ui-react.es.js",
+  "repository": "git@github.com:adambrgmn/wp-admin-ui-react.git",
+  "author": "Adam Bergman <adam@fransvilhelm.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_ENV=production rollup -c"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
+    "@babel/plugin-transform-classes": "^7.0.0-beta.49",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-flow": "^7.0.0-beta.49",
+    "@babel/preset-react": "^7.0.0-beta.49",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "rollup": "^0.59.4",
+    "rollup-plugin-babel": "^4.0.0-beta.4",
+    "styled-components": "^3.3.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "styled-components": "^3"
+  }
+}
