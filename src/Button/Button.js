@@ -198,27 +198,14 @@ const Button = styled.button`
   }
 
   ${props =>
-    props.dashicons &&
+    props.dashicon &&
     css`
+      ${applyDashicon(props.dashicon)};
+      
       &::before {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        font-size: 20px;
-        line-height: 1;
-        font-family: dashicons;
-        text-decoration: inherit;
-        font-weight: normal;
-        font-style: normal;
-        vertical-align: top;
-        text-align: center;
-        transition: color 0.1s ease-in 0;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        transform: translateY(3px);
       }
     `};
-
-  ${props => props.dashicon && applyDashicon(props.dashicon)};
 
   ${media.tablet`
     padding: 6px 14px;

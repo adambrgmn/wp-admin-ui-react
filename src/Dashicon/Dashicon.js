@@ -257,7 +257,7 @@ export const applyDashicon = icon => css`
   }
 `;
 
-const Dashicon = styled.span`
+const Dashicon = styled.i`
   ${props => applyDashicon(props.dashicon)};
 `;
 

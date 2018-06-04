@@ -42,6 +42,10 @@ const Group = ({ labels }) => (
 ```
 
 ```js
+<Button dashicon="art">Art</Button><br />
+```
+
+```js
 <ButtonGroup>
   <Button>Action 1</Button>
   <Button>Action 2</Button>
