@@ -2,6 +2,7 @@
   "parser": "babel-eslint",
   "extends": ["airbnb", "prettier"],
   "rules": {
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": 0
   }
 }
