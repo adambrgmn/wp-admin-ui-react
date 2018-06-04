@@ -10,4 +10,15 @@ module.exports = {
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'styleguidist/Wrapper'),
   },
+  template: {
+    head: {
+      links: [
+        {
+          rel: 'stylesheet',
+          href:
+            'https://rawgit.com/WordPress/dashicons/master/icon-font/css/dashicons.css',
+        },
+      ],
+    },
+  },
 };
