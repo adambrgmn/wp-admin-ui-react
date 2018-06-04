@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'styled-components';
 
 /**
@@ -13,4 +15,44 @@ const media = {
   `,
 };
 
-export { media };
+class WithState extends React.Component {
+  propTypes = {
+    initialState: PropTypes.object.isRequired, // eslint-disable-line
+    resetAfter: PropTypes.number,
+    children: PropTypes.func.isRequired,
+  };
+
+  defaultProps = {
+    resetAfter: 0,
+  };
+
+  state = this.props.initialState;
+
+  timeoutID = null;
+
+  componentWillUnmount() {
+    if (this.timeoutID) {
+      clearTimeout(this.timeoutID);
+    }
+  }
+
+  publicSetState = newState => {
+    this.setState(newState, () => {
+      if (this.props.resetAfter) {
+        this.timeoutID = setTimeout(
+          () => this.setState(() => ({ ...this.props.initialState })),
+          this.props.resetAfter,
+        );
+      }
+    });
+  };
+
+  render() {
+    return this.props.children({
+      state: this.state,
+      setState: newState => this.publicSetState(newState),
+    });
+  }
+}
+
+export { media, WithState };

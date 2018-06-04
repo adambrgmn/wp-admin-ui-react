@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Button from './Button';
 import ButtonGroup from './ButtonGroup';
 
-storiesOf('Buttons/Button', module)
+storiesOf('Button/Button', module)
   .add('standard', () => <Button>Button</Button>)
   .add('secondary', () => <Button modifiers={['secondary']}>Button</Button>)
   .add('primary', () => <Button modifiers={['primary']}>Button</Button>)
@@ -22,7 +22,7 @@ storiesOf('Buttons/Button', module)
   ))
   .add('with icon', () => <Button dashicon="wordpress">Button</Button>);
 
-storiesOf('Buttons/ButtonGroup', module).add('standard', () => (
+storiesOf('Button/ButtonGroup', module).add('standard', () => (
   <ButtonGroup>
     <Button>Button</Button>
     <Button>Button</Button>

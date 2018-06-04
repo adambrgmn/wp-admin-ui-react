@@ -203,8 +203,6 @@ const Button = styled.button`
       ${applyDashicon(props.dashicon)};
 
       &::before {
-        margin-left: -2px;
-        margin-right: 5px;
         transform: translate3d(0, 3px, 0);
       }
     `};

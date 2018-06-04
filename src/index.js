@@ -1,4 +1,4 @@
-export { Button } from './Button';
+export { Button, ButtonGroup } from './Button';
 export { Dashicon } from './Dashicon';
 export { Link } from './Link';
 export { Notice } from './Notice';

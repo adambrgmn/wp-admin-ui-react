@@ -1,4 +1,4 @@
-import { createElement } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import {
@@ -92,23 +92,24 @@ const NoticeWrapper = styled.div`
   ${applyStyleModifiers(MODIFIER_CONFIG)};
 `;
 
-function Notice(props) {
-  return createElement(
-    NoticeWrapper,
-    props,
-    props.children,
-    props.dismissable
-      ? createElement(NoticeDismiss, { onClick: props.onClick })
-      : null,
+function Notice({ onClick, dismissable, children, ...props }) {
+  return (
+    <NoticeWrapper {...props}>
+      {children}
+      {dismissable && <NoticeDismiss onClick={onClick} />}
+    </NoticeWrapper>
   );
 }
 
 Notice.propTypes = {
+  onClick: PropTypes.func,
   dismissable: PropTypes.arrayOf,
   modifiers: styleModifierPropTypes(MODIFIER_CONFIG),
+  children: PropTypes.node.isRequired,
 };
 
 Notice.defaultProps = {
+  onClick: null,
   dismissable: true,
   modifiers: ['info'],
 };
