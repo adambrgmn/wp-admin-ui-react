@@ -8,7 +8,9 @@
   "author": "Adam Bergman <adam@fransvilhelm.com>",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production rollup -c"
+    "build": "NODE_ENV=production rollup -c",
+    "styleguide": "npx styleguidist server",
+    "styleguide:build": "npx styleguidist build"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.49",
