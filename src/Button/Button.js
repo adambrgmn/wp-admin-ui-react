@@ -201,9 +201,11 @@ const Button = styled.button`
     props.dashicon &&
     css`
       ${applyDashicon(props.dashicon)};
-      
+
       &::before {
-        transform: translateY(3px);
+        margin-left: -2px;
+        margin-right: 5px;
+        transform: translate3d(0, 3px, 0);
       }
     `};
 
