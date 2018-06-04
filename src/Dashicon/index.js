@@ -1,0 +1,1 @@
+export Dashicon from './Dashicon';
