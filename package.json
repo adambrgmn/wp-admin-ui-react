@@ -24,6 +24,7 @@
     "@webpack-blocks/webpack": "^1.0.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
+    "babel-plugin-styled-components": "^1.5.1",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -44,9 +45,9 @@
     "webpack": "^4.10.2"
   },
   "peerDependencies": {
+    "prop-types": "^15.6.0",
     "react": "^15.0.0 || ^16.0.0",
-    "styled-components": "^3",
-    "prop-types": "^15.6.0"
+    "styled-components": "^3"
   },
   "dependencies": {
     "styled-components-modifiers": "^1.0.1"
