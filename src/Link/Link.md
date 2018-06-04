@@ -9,7 +9,7 @@ const A = () => <Link href="https://google.com/">Search</Link>;
 ### Example
 
 ```js
-<p>
+<Paragraph>
   Read more by following <Link href="#">this link</Link>
-</p>
+</Paragraph>
 ```
