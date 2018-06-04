@@ -7,6 +7,7 @@ import {
 import ButtonGroup from './ButtonGroup';
 import { media } from '../utils';
 import { Dashicons, applyDashicon } from '../Dashicon/Dashicon';
+import { applyLinkStyles } from '../Link/Link';
 
 const MODIFIER_CONFIG = {
   large: () => `
@@ -85,31 +86,16 @@ const MODIFIER_CONFIG = {
   `,
   link: () => `
     margin: 0;
+    padding: 0;
+    box-shadow: none;
     border: 0;
     border-radius: 0;
-    padding: 0;
-    text-align: left;
-    text-decoration: underline;
-    color: #0073aa;
     background: none;
-    box-shadow: none;
     outline: none;
     cursor: pointer;
-    transition-property: border, background, color;
-    transition-duration: .05s;
-    transition-timing-function: ease-in-out;
-
-    &:hover,
-    &:active {
-      color: #00a0d2;
-    }
-
-    &:focus {
-      color: #124964;
-      box-shadow:
-        0 0 0 1px #5b9dd9,
-        0 0 2px 1px rgba(30, 140, 190, .8);
-    }
+    text-align: left;
+    
+    ${applyLinkStyles()};
   `,
   'link-delete': () => `
     color: #aa0000;
