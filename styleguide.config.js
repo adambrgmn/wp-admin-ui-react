@@ -6,6 +6,7 @@ const babel = require('@webpack-blocks/babel');
 module.exports = {
   components: 'src/**/[A-Z]*.js',
   webpackConfig: createConfig([babel()]),
+  skipComponentsWithoutExample: true,
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'styleguidist/Wrapper'),
   },

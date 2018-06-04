@@ -11,6 +11,18 @@ import { Button } from 'wp-admin-ui-react';
 const Btn = () => <Button modifier={['modifier']}>Button</Button>;
 ```
 
+Or as a group:
+
+```js static
+import { Button, ButtonGroup } from 'wp-admin-ui-react';
+
+const Group = ({ labels }) => (
+  <ButtonGroup>
+    {labels.map(label => <Button key={label}>{label}</Button>)}
+  </ButtonGroup>
+);
+```
+
 ```js
 <Button>Normal</Button><br />
 <Button modifiers={['large']}>Large</Button><br />
@@ -27,4 +39,12 @@ const Btn = () => <Button modifier={['modifier']}>Button</Button>;
 ```js
 <Button modifiers={['link']}>Button as link</Button><br />
 <Button modifiers={['link', 'link-delete']}>Button as link</Button><br />
+```
+
+```js
+<ButtonGroup>
+  <Button>Action 1</Button>
+  <Button>Action 2</Button>
+  <Button modifiers={['primary']}>Action 3</Button>
+</ButtonGroup>
 ```
