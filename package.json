@@ -9,9 +9,6 @@
   "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
-    "styleguide": "npx styleguidist server",
-    "styleguide:build": "npx styleguidist build",
-    "new-comp": "./scripts/new-component.js",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook"
   },
