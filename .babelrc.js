@@ -23,6 +23,7 @@ module.exports = {
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-proposal-object-rest-spread', { useBuiltIns: true }],
     '@babel/plugin-transform-classes',
+    '@babel/plugin-proposal-export-default-from',
     cjs && '@babel/plugin-transform-modules-commonjs',
   ].filter(Boolean),
 };
