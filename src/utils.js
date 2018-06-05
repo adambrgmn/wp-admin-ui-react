@@ -16,13 +16,13 @@ const media = {
 };
 
 class WithState extends React.Component {
-  propTypes = {
+  static propTypes = {
     initialState: PropTypes.object.isRequired, // eslint-disable-line
     resetAfter: PropTypes.number,
     children: PropTypes.func.isRequired,
   };
 
-  defaultProps = {
+  static defaultProps = {
     resetAfter: 0,
   };
 
