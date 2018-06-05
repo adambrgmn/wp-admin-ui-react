@@ -8,6 +8,7 @@ const TableActionRowWrapper = styled.div`
   left: -9999em;
   padding: 2px 0 0;
   font-size: 13px;
+  font-weight: 400;
   color: #dddddd;
 
   ${Table} tr:hover & {
