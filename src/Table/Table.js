@@ -5,57 +5,36 @@ const Table = styled.table`
   margin: 0;
   border-spacing: 0;
   width: 100%;
-  clear: both;
   border: 1px solid #e5e5e5;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
-  background: #fff;
-
-  & * {
-    word-wrap: break-word;
-  }
+  background: #ffffff;
 
   & td,
   & th {
     padding: 8px 10px;
-    color: #555;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-align: left;
+    color: #555555;
+    vertical-align: top;
+  }
+
+  & tbody th {
+    font-size: 14px;
+    font-weight: 600;
   }
 
   & thead th,
   & thead td {
     border-bottom: 1px solid #e1e1e1;
+    vertical-align: bottom;
   }
 
   & tfoot th,
   & tfoot td {
     border-top: 1px solid #e1e1e1;
     border-bottom: none;
-  }
-
-  & td {
-    font-size: 13px;
-    line-height: 1.5em;
-    vertical-align: middle;
-  }
-
-  & th,
-  & thead td,
-  & tfoot td {
-    text-align: left;
-    line-height: 1.3em;
-    font-size: 14px;
-  }
-
-  & thead th,
-  & thead td,
-  & tfoot th,
-  & tfoot td {
-    line-height: 1.4em;
-  }
-
-  & th,
-  & thead td,
-  & tfoot td {
-    font-weight: 400;
   }
 
   & thead tr th,
