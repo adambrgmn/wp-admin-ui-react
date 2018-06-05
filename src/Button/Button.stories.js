@@ -13,14 +13,11 @@ storiesOf('Button/Button', module)
   .add('small', () => <Button modifiers={['small']}>Button</Button>)
   .add('hero', () => <Button modifiers={['primary', 'hero']}>Button</Button>)
   .add('as link', () => (
-    <div>
-      <p>
-        <Button modifiers={['link']}>This link</Button> is actually a button.
-      </p>
-      <p>
-        And <Button modifiers={['link', 'link-delete']}>this link</Button> too.
-      </p>
-    </div>
+    <p>
+      <Button modifiers={['link']}>Link</Button> |{' '}
+      <Button modifiers={['link', 'link-error']}>Error</Button> |{' '}
+      <Button modifiers={['link', 'link-warning']}>Warning</Button>
+    </p>
   ))
   .add('with icon', () => <Button dashicon="wordpress">Button</Button>);
 

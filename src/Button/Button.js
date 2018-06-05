@@ -85,24 +85,37 @@ const MODIFIER_CONFIG = {
     }
   `,
   link: () => `
+    height: auto;
     margin: 0;
     padding: 0;
     box-shadow: none;
     border: 0;
     border-radius: 0;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-align: left;
     background: none;
     outline: none;
     cursor: pointer;
-    text-align: left;
     
     ${applyLinkStyles()};
   `,
-  'link-delete': () => `
+  'link-error': () => `
     color: #aa0000;
 
     &:hover,
     &:focus {
       color: #dc3232;
+    }
+  `,
+  'link-warning': () => `
+    color: #d98500;
+
+    &:hover,
+    &:focus {
+      color: #d98500;
     }
   `,
 };
