@@ -1,16 +1,22 @@
 {
   "name": "wp-admin-ui-react",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "WordPress admin UI as React components",
   "main": "lib/wp-admin-ui-react.js",
   "module": "lib/wp-admin-ui-react.es.js",
   "repository": "git@github.com:adambrgmn/wp-admin-ui-react.git",
   "author": "Adam Bergman <adam@fransvilhelm.com>",
   "license": "MIT",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "storybook:build": "build-storybook",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release",
+    "docs": "build-storybook && gh-pages -d storybook-static"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.49",
@@ -31,12 +37,14 @@
     "babel-eslint": "^8.2.3",
     "babel-plugin-styled-components": "^1.5.1",
     "babel-runtime": "^6.26.0",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
+    "gh-pages": "^1.2.0",
     "husky": "^1.0.0-rc.8",
     "lint-staged": "^7.1.3",
     "prettier": "^1.13.4",
@@ -47,10 +55,12 @@
     "rollup": "^0.59.4",
     "rollup-plugin-babel": "^4.0.0-beta.4",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "styled-components": "^3.3.0"
+    "semantic-release": "^15.5.0",
+    "styled-components": "^3.3.0",
+    "travis-deploy-once": "^5.0.0"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.0",
+    "prop-types": "^15",
     "react": ">= 0.14.0 < 17.0.0-0",
     "styled-components": "^3"
   },
@@ -59,5 +69,10 @@
   },
   "hooks": {
     "pre-commit": "lint-staged"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
