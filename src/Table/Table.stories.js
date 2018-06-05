@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import Table from './Table';
 import { Link } from '../Link';
 import { Button } from '../Button';
+import { ScreenReaderText } from '../ScreenReaderText';
 
 const DefaultTableContent = () => {
   const HeadRow = () => (
@@ -28,7 +29,9 @@ const DefaultTableContent = () => {
             </th>
             <td>2018-01-0{i}</td>
             <td>
-              <Button dashicon="trash" />
+              <Button dashicon="trash">
+                <ScreenReaderText>Remove</ScreenReaderText>
+              </Button>
             </td>
           </tr>
         ))}

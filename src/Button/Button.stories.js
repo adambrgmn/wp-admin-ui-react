@@ -1,10 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withNotes } from '@storybook/addon-notes';
 import Button from './Button';
 import ButtonGroup from './ButtonGroup';
+import notes from './README.md';
 
 storiesOf('Button/Button', module)
-  .add('standard', () => <Button>Button</Button>)
+  .add('standard', withNotes(notes)(() => <Button>Button</Button>))
   .add('secondary', () => <Button modifiers={['secondary']}>Button</Button>)
   .add('primary', () => <Button modifiers={['primary']}>Button</Button>)
   .add('large', () => <Button modifiers={['large']}>Button</Button>)
