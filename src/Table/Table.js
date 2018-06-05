@@ -17,6 +17,7 @@ const Table = styled.table`
   & td,
   & th {
     padding: 8px 10px;
+    color: #555;
   }
 
   & thead th,
@@ -31,12 +32,9 @@ const Table = styled.table`
   }
 
   & td {
-    vertical-align: top;
-  }
-
-  & td {
     font-size: 13px;
     line-height: 1.5em;
+    vertical-align: middle;
   }
 
   & th,
@@ -52,11 +50,6 @@ const Table = styled.table`
   & tfoot th,
   & tfoot td {
     line-height: 1.4em;
-  }
-
-  & th,
-  & td {
-    color: #555;
   }
 
   & th,
