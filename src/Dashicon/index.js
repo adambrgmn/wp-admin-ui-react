@@ -1,1 +1,1 @@
-export Dashicon from './Dashicon';
+export Dashicon, { Dashicons } from './Dashicon';
