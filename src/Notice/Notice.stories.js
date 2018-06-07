@@ -1,10 +1,26 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withReadme } from 'storybook-readme';
 import Notice from './Notice';
 import { WithState } from '../utils';
+import readme from './README.md';
 
 storiesOf('Notice', module)
-  .add('standard', () => <Notice>Something to take note about</Notice>)
+  .addDecorator(withReadme(readme))
+  .add('standard', () => (
+    <div>
+      <Notice dismissable={false}>Something to take note about</Notice>
+      <Notice dismissable={false} modifiers={['success']}>
+        Something to be happy about
+      </Notice>
+      <Notice dismissable={false} modifiers={['warning']}>
+        Something to be happy about
+      </Notice>
+      <Notice dismissable={false} modifiers={['error']}>
+        Something to be happy about
+      </Notice>
+    </div>
+  ))
   .add('success', () => (
     <Notice modifiers={['success']}>Something to be happy about</Notice>
   ))

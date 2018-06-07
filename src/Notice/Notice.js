@@ -92,9 +92,9 @@ const NoticeWrapper = styled.div`
   ${applyStyleModifiers(MODIFIER_CONFIG)};
 `;
 
-function Notice({ onClick, dismissable, children, ...props }) {
+function Notice({ onClick, dismissable, hide, children, ...props }) {
   return (
-    <NoticeWrapper {...props}>
+    <NoticeWrapper hide={hide} {...props}>
       {children}
       {dismissable && <NoticeDismiss onClick={onClick} />}
     </NoticeWrapper>
@@ -103,7 +103,8 @@ function Notice({ onClick, dismissable, children, ...props }) {
 
 Notice.propTypes = {
   onClick: PropTypes.func,
-  dismissable: PropTypes.arrayOf,
+  dismissable: PropTypes.bool,
+  hide: PropTypes.bool,
   modifiers: styleModifierPropTypes(MODIFIER_CONFIG),
   children: PropTypes.node.isRequired,
 };
@@ -111,6 +112,7 @@ Notice.propTypes = {
 Notice.defaultProps = {
   onClick: null,
   dismissable: true,
+  hide: false,
   modifiers: ['info'],
 };
 
