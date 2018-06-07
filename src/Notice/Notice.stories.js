@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import Notice from './Notice';
+import { Notice } from './';
 import { WithState } from '../utils';
 import readme from './README.md';
 
@@ -9,15 +9,15 @@ storiesOf('Notice', module)
   .addDecorator(withReadme(readme))
   .add('standard', () => (
     <div>
-      <Notice dismissable={false}>Something to take note about</Notice>
+      <Notice dismissable={false}>Notification</Notice>
       <Notice dismissable={false} modifiers={['success']}>
-        Something to be happy about
+        Notification
       </Notice>
       <Notice dismissable={false} modifiers={['warning']}>
-        Something to be happy about
+        Notification
       </Notice>
       <Notice dismissable={false} modifiers={['error']}>
-        Something to be happy about
+        Notification
       </Notice>
     </div>
   ))

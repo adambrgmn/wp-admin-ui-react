@@ -2,8 +2,7 @@
 import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import Table from './Table';
-import TableActionRow from './TableActionRow';
+import { Table, TableActionRow } from './';
 import { Link } from '../Link';
 import { Button } from '../Button';
 import { ScreenReaderText } from '../ScreenReaderText';

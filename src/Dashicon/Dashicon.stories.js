@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import Dashicon, { Dashicons } from './Dashicon';
+import { Dashicon, Dashicons } from './';
 import readme from './README.md';
 
 storiesOf('Dashicon', module)

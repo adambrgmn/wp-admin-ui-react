@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import Link from './Link';
+import { Link } from './';
 import readme from './README.md';
 
 storiesOf('Link', module)

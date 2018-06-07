@@ -3,9 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import styled from 'styled-components';
 
-import Postbox from './Postbox';
-import PostboxContent from './PostboxContent';
-import PostboxFooter from './PostboxFooter';
+import { Postbox, PostboxContent, PostboxFooter } from './';
 import readme from './README.md';
 
 import { Paragraph } from '../Paragraph';

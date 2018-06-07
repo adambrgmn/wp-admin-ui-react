@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import ScreenReaderText from './ScreenReaderText';
+import { ScreenReaderText } from './';
 import { Button } from '../Button';
 import { Paragraph } from '../Paragraph';
 import readme from './README.md';

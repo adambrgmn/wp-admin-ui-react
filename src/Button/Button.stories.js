@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import Button from './Button';
-import ButtonGroup from './ButtonGroup';
+import { Button, ButtonGroup } from './';
 import readme from './README.md';
 
 storiesOf('Button', module)
