@@ -1,6 +1,40 @@
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import Table from '../Table/Table';
+import {
+  applyStyleModifiers,
+  styleModifierPropTypes,
+} from 'styled-components-modifiers';
+import { Table, PageTitle } from '../';
+
+const MODIFIER_CONFIG = {
+  button: () => `
+    position: relative;
+    top: -3px;
+    margin-left: 4px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 4px 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: none;
+    line-height: normal;
+    text-decoration: none;
+    background: #f7f7f7;
+    color: #0073aa;
+    cursor: pointer;
+    outline: 0;
+
+    &:hover {
+      border-color: #008EC2;
+      background: #00a0d2;
+      color: #fff;
+    }
+
+    ${PageTitle} + & {
+      margin-left: 0;
+    }
+  `,
+};
 
 export const applyLinkStyles = () => css`
   color: #0073aa;
@@ -26,10 +60,12 @@ export const applyLinkStyles = () => css`
 
 const Link = styled.a`
   ${applyLinkStyles};
+  ${applyStyleModifiers(MODIFIER_CONFIG)};
 `;
 
 Link.propTypes = {
   href: PropTypes.string.isRequired,
+  modifiers: styleModifierPropTypes(MODIFIER_CONFIG),
 };
 
 /** @component */

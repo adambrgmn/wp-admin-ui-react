@@ -1,11 +1,13 @@
 /* eslint-disable react/no-array-index-key */
 import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
+import { withReadme } from 'storybook-readme';
 import Table from './Table';
 import TableActionRow from './TableActionRow';
 import { Link } from '../Link';
 import { Button } from '../Button';
 import { ScreenReaderText } from '../ScreenReaderText';
+import readme from './README.md';
 
 const DefaultTableContent = () => {
   const HeadRow = () => (
@@ -46,6 +48,7 @@ const DefaultTableContent = () => {
 };
 
 storiesOf('Table', module)
+  .addDecorator(withReadme(readme))
   .add('standard', () => (
     <Table>
       <DefaultTableContent />

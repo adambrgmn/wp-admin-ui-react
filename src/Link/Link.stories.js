@@ -10,4 +10,11 @@ storiesOf('Link', module)
     <p>
       This is <Link href="/">a link</Link>
     </p>
+  ))
+  .add('as button', () => (
+    <p>
+      <Link href="/" modifiers={['button']}>
+        A link
+      </Link>
+    </p>
   ));
