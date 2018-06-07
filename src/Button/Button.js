@@ -103,6 +103,8 @@ const MODIFIER_CONFIG = {
     ${applyLinkStyles()};
   `,
   'link-error': () => `
+    ${MODIFIER_CONFIG.link()};
+
     color: #aa0000;
 
     &:hover,
@@ -111,6 +113,8 @@ const MODIFIER_CONFIG = {
     }
   `,
   'link-warning': () => `
+    ${MODIFIER_CONFIG.link()};
+
     color: #d98500;
 
     &:hover,
@@ -233,27 +237,11 @@ const Button = styled.button`
 `;
 
 Button.propTypes = {
-  /**
-   * Available modifiers: large, small, hero, secondary, primary, link, link-delete
-   */
   modifiers: styleModifierPropTypes(MODIFIER_CONFIG),
-  /**
-   * Disabled button
-   */
   disabled: PropTypes.bool,
-  /**
-   * Optional icon (see /icons)
-   */
   dashicon: PropTypes.oneOf([...Object.keys(Dashicons)]),
-  /**
-   * Click handler
-   */
   onClick: PropTypes.func,
-  /**
-   * Button label
-   */
   children: PropTypes.node.isRequired,
 };
 
-/** @component */
 export default Button;

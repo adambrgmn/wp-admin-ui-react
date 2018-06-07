@@ -8,5 +8,4 @@ const ButtonGroup = styled.div`
   vertical-align: middle;
 `;
 
-/** @component */
 export default ButtonGroup;

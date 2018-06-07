@@ -1,12 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withNotes } from '@storybook/addon-notes';
+import { withReadme } from 'storybook-readme';
 import Button from './Button';
 import ButtonGroup from './ButtonGroup';
-import notes from './README.md';
+import readme from './README.md';
 
-storiesOf('Button/Button', module)
-  .add('standard', withNotes(notes)(() => <Button>Button</Button>))
+storiesOf('Button', module)
+  .addDecorator(withReadme(readme))
+  .add('standard', () => <Button>Button</Button>)
   .add('secondary', () => <Button modifiers={['secondary']}>Button</Button>)
   .add('primary', () => <Button modifiers={['primary']}>Button</Button>)
   .add('large', () => <Button modifiers={['large']}>Button</Button>)
@@ -15,16 +16,18 @@ storiesOf('Button/Button', module)
   .add('as link', () => (
     <p>
       <Button modifiers={['link']}>Link</Button> |{' '}
-      <Button modifiers={['link', 'link-error']}>Error</Button> |{' '}
-      <Button modifiers={['link', 'link-warning']}>Warning</Button>
+      <Button modifiers={['link-error']}>Error</Button> |{' '}
+      <Button modifiers={['link-warning']}>Warning</Button>
     </p>
   ))
   .add('with icon', () => <Button dashicon="wordpress">Button</Button>);
 
-storiesOf('Button/ButtonGroup', module).add('standard', () => (
-  <ButtonGroup>
-    <Button>Button</Button>
-    <Button>Button</Button>
-    <Button>Button</Button>
-  </ButtonGroup>
-));
+storiesOf('Button/ButtonGroup', module)
+  .addDecorator(withReadme(readme))
+  .add('standard', () => (
+    <ButtonGroup>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+    </ButtonGroup>
+  ));
